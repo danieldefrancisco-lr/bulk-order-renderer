@@ -61,7 +61,6 @@
                                     skuValue = cpContentHelper.getDefaultCPSku(cpCatalogEntry).getSku();
                                 }
 
-                                String thumbnailSrc = cpInstanceHelper.getCPInstanceThumbnailSrc(cpInstanceId);
                             %>
 
                             <td class="">
@@ -84,9 +83,10 @@
                                 <c:when test="<%= cpSku != null %>">
                                     <td>
                                         <commerce-ui:add-to-cart
-                                                        block="<%= false %>"
+                                                        alignment="full-width"
 														CPCatalogEntry="<%= cpCatalogEntry %>"
-														options='<%= "[]" %>'
+														inline="<%= false %>"
+														size="md"
                                         />
                                     </td>
                                 </c:when>
